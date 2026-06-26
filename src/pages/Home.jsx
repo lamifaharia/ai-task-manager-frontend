@@ -75,7 +75,7 @@ export default function Home() {
       <section className="py-20 px-4 bg-gray-50 dark:bg-slate-950">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-3">Everything You Need to Stay Productive</h2>
+            <h2 className="text-3xl font-bold mb-3 text-gray-900 dark:text-white">Everything You Need to Stay Productive</h2>
             <p className="text-gray-500 dark:text-slate-400 max-w-xl mx-auto">Powerful features designed to help individuals and teams get more done.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -84,7 +84,7 @@ export default function Home() {
                 <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-4 ${f.color}`}>
                   <f.icon className="w-5 h-5" />
                 </div>
-                <h3 className="font-semibold mb-2">{f.title}</h3>
+                <h3 className="font-semibold mb-2 text-gray-900 dark:text-white">{f.title}</h3>
                 <p className="text-sm text-gray-500 dark:text-slate-400 leading-relaxed">{f.desc}</p>
               </div>
             ))}
@@ -95,7 +95,7 @@ export default function Home() {
       {/* How it works */}
       <section className="py-20 px-4 bg-white dark:bg-slate-900">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-12">How TaskAI Works</h2>
+          <h2 className="text-3xl font-bold mb-12 text-gray-900 dark:text-white">How TaskAI Works</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { step: "01", title: "Create an Account", desc: "Sign up in seconds. No credit card needed to get started." },
@@ -106,7 +106,7 @@ export default function Home() {
                 <div className="w-12 h-12 bg-primary-500 text-white rounded-xl flex items-center justify-center font-bold text-lg mx-auto mb-4">
                   {item.step}
                 </div>
-                <h3 className="font-semibold mb-2">{item.title}</h3>
+                <h3 className="font-semibold mb-2 text-gray-900 dark:text-white">{item.title}</h3>
                 <p className="text-sm text-gray-500 dark:text-slate-400">{item.desc}</p>
               </div>
             ))}
@@ -118,7 +118,7 @@ export default function Home() {
       <section className="py-20 px-4 bg-gray-50 dark:bg-slate-950">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-3">What Our Users Say</h2>
+            <h2 className="text-3xl font-bold mb-3 text-gray-900 dark:text-white">What Our Users Say</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((t) => (
@@ -130,7 +130,7 @@ export default function Home() {
                 <div className="flex items-center gap-3">
                   <img src={t.avatar} alt={t.name} className="w-9 h-9 rounded-full bg-primary-100" />
                   <div>
-                    <p className="text-sm font-semibold">{t.name}</p>
+                    <p className="text-sm font-semibold text-gray-900 dark:text-white">{t.name}</p>
                     <p className="text-xs text-gray-400 dark:text-slate-500">{t.role}</p>
                   </div>
                 </div>
@@ -143,11 +143,11 @@ export default function Home() {
       {/* FAQ */}
       <section className="py-20 px-4 bg-white dark:bg-slate-900">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqs.map((faq) => (
               <details key={faq.q} className="group bg-gray-50 dark:bg-slate-800 rounded-xl p-5 border border-gray-100 dark:border-slate-700">
-                <summary className="font-medium cursor-pointer list-none flex justify-between items-center">
+                <summary className="font-medium cursor-pointer list-none flex justify-between items-center text-gray-900 dark:text-white">
                   {faq.q}
                   <span className="text-gray-400 group-open:rotate-180 transition-transform text-lg">↓</span>
                 </summary>
@@ -159,9 +159,9 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-4 bg-gradient-to-r from-primary-500 to-accent-500">
-        <div className="max-w-3xl mx-auto text-center text-white">
-          <h2 className="text-3xl font-bold mb-4">Ready to Boost Your Productivity?</h2>
+      <section className="py-20 px-4 bg-gray-50 dark:bg-slate-950">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Ready to Boost Your Productivity?</h2>
           <p className="text-primary-100 mb-8">Join thousands of users already managing tasks smarter with AI.</p>
           <Link to="/register" className="inline-flex items-center gap-2 bg-white text-primary-600 font-semibold px-8 py-3 rounded-xl hover:bg-primary-50 transition-colors">
             Start for Free <ArrowRight className="w-4 h-4" />
@@ -171,15 +171,31 @@ export default function Home() {
 
       {/* Newsletter */}
       <section className="py-16 px-4 bg-gray-50 dark:bg-slate-950">
-        <div className="max-w-xl mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-2">Stay in the Loop</h2>
-          <p className="text-sm text-gray-500 dark:text-slate-400 mb-6">Get productivity tips and AI updates delivered to your inbox.</p>
-          <form className="flex flex-col sm:flex-row gap-2" onSubmit={(e) => { e.preventDefault(); alert("Subscribed! Thank you."); }}>
-            <input type="email" required placeholder="Enter your email" className="flex-1 px-4 py-2.5 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500" />
-            <button type="submit" className="bg-primary-500 text-white px-5 py-2.5 rounded-xl text-sm font-medium hover:bg-primary-600 transition-colors">Subscribe</button>
-          </form>
-        </div>
-      </section>
+  <div className="max-w-xl mx-auto text-center">
+    <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Stay in the Loop</h2>
+    <p className="text-sm text-gray-500 dark:text-slate-400 mb-6">
+      Get productivity tips and AI updates delivered to your inbox.
+    </p>
+    
+    <form 
+      className="flex flex-col sm:flex-row gap-3 w-full max-w-md mx-auto" 
+      onSubmit={(e) => { e.preventDefault(); alert("Subscribed! Thank you."); }}
+    >
+      <input 
+        type="email" 
+        required 
+        placeholder="Enter your email" 
+        className="flex-1 px-4 py-3 rounded-xl border border-gray-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-gray-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all" 
+      />
+      <button 
+        type="submit" 
+        className="bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-xl text-sm font-semibold transition-colors"
+      >
+        Subscribe
+      </button>
+    </form>
+  </div>
+</section>
     </div>
   );
 }
