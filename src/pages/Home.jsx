@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Brain, Zap, Shield, BarChart3, Users, Star, CheckCircle, Sparkles } from "lucide-react";
+import { ArrowRight, Brain, Zap, Shield, BarChart3, Users, Star, Sparkles } from "lucide-react";
 
 const features = [
   { icon: Brain, title: "AI Task Generator", desc: "Describe your goal and let AI break it into actionable tasks automatically.", color: "text-purple-500 bg-purple-50 dark:bg-purple-900/20" },
